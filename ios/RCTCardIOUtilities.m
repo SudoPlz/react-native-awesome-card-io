@@ -23,4 +23,9 @@ RCT_EXPORT_METHOD(preload) {
     return [CardIOUtilities preload];
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
+
 @end
