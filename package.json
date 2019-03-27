@@ -28,7 +28,8 @@
   "homepage": "https://github.com/Skyscanner/react-native-awesome-card-io",
   "license": "MIT",
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-native-awesome-card-io": "SudoPlz/react-native-awesome-card-io#bin"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",

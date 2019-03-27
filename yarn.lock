@@ -1145,6 +1145,12 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
+react-native-awesome-card-io@SudoPlz/react-native-awesome-card-io#bin:
+  version "0.7.5"
+  resolved "https://codeload.github.com/SudoPlz/react-native-awesome-card-io/tar.gz/f1d71a2b1aee3a3bb8a4301ddb096679e4ed9727"
+  dependencies:
+    prop-types "^15.5.10"
+
 read-pkg-up@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-2.0.0.tgz#6b72a8048984e0c41e79510fd5e9fa99b3b549be"
