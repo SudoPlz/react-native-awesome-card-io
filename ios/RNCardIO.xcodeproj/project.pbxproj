@@ -138,6 +138,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -247,8 +248,7 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(PROJECT_DIR)/../../../ios/Pods/**",
-					"$(SRCROOT)/../../../ios/Pods/CardIO/**",
+					"$(SRCROOT)/../../../ios/Pods/CardIO",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -268,8 +268,7 @@
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(PROJECT_DIR)/../../../ios/Pods/**",
-					"$(SRCROOT)/../../../ios/Pods/CardIO/**",
+					"$(SRCROOT)/../../../ios/Pods/CardIO",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
