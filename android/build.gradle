@@ -13,7 +13,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:${safeExtGet('gradleBuildVersion', '3.2.1')}'
+        classpath "com.android.tools.build:gradle:${safeExtGet('gradleBuildVersion', '3.2.1')}"
     }
 }
 
@@ -28,7 +28,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', 27)
-    buildToolsVersion safeExtGet('buildToolsVersion', "25.0.2")
+    buildToolsVersion safeExtGet('buildToolsVersion', '25.0.2')
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
