@@ -27,7 +27,7 @@ import java.io.OutputStream;
 
 public class RNCardIOModule extends ReactContextBaseJavaModule implements ActivityEventListener {
 
-  public static final int CARD_IO_SCAN = 1;
+  public static final int CARD_IO_SCAN = 1317;
 
   private Promise promise;
   private ReactApplicationContext mReactContext;
@@ -121,37 +121,37 @@ public class RNCardIOModule extends ReactContextBaseJavaModule implements Activi
     if (requestCode != CARD_IO_SCAN) {
       return;
     }
-    if (data != null ) {
-     
-      
+    if (data != null && data.hasExtra(CardIOActivity.EXTRA_SCAN_RESULT)) {
       Bitmap resultCard = CardIOActivity.getCapturedCardImage(data);
 
-        ContextWrapper wrapper = new ContextWrapper(mReactContext);
-        File newImageFile = wrapper.getDir("images",0);
-        newImageFile = new File(newImageFile, "detectedCardImage"+ ".jpg");
-        try {
-            OutputStream outputStream = new FileOutputStream(newImageFile);
-            resultCard.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
-            outputStream.flush();
-            outputStream.close();
+      ContextWrapper wrapper = new ContextWrapper(mReactContext);
+      File newImageFile = wrapper.getDir("images",0);
+      newImageFile = new File(newImageFile, "detectedCardImage"+ ".jpg");
+      try {
+          OutputStream outputStream = new FileOutputStream(newImageFile);
+          resultCard.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
+          outputStream.flush();
+          outputStream.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+      } catch (FileNotFoundException e) {
+          e.printStackTrace();
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
 
-//       CreditCard scanResult = data.getParcelableExtra(CardIOActivity.EXTRA_SCAN_RESULT);
+      CreditCard scanResult = data.getParcelableExtra(CardIOActivity.EXTRA_SCAN_RESULT);
       
       WritableMap res = Arguments.createMap();
       res.putString("scannedImagePath", newImageFile.getAbsolutePath());
-//       res.putString("cardNumber", scanResult.cardNumber);
-//       res.putString("redactedCardNumber", scanResult.getRedactedCardNumber());
-//       res.putInt("expiryMonth", scanResult.expiryMonth);
-//       res.putInt("expiryYear", scanResult.expiryYear);
-//       res.putString("cvv", scanResult.cvv);
-//       res.putString("postalCode", scanResult.postalCode);
-//       res.putString("cardholderName", scanResult.cardholderName);
+      if (scanResult != null) {
+        res.putString("cardNumber", scanResult.cardNumber);
+        res.putString("redactedCardNumber", scanResult.getRedactedCardNumber());
+        res.putInt("expiryMonth", scanResult.expiryMonth);
+        res.putInt("expiryYear", scanResult.expiryYear);
+        res.putString("cvv", scanResult.cvv);
+        res.putString("postalCode", scanResult.postalCode);
+        res.putString("cardholderName", scanResult.cardholderName);
+      }
       promise.resolve(res);
     } else {
       promise.reject("user_cancelled", "The user cancelled");
