@@ -1,6 +1,6 @@
 {
-  "name": "react-native-awesome-card-io",
-  "version": "0.7.0",
+  "name": "@skyscanner/react-native-awesome-card-io",
+  "version": "0.7.4-skyscanner",
   "description": "A complete and cross-platform React Native component for card.io",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kerumen/react-native-awesome-card-io"
+    "url": "https://github.com/Skyscanner/react-native-awesome-card-io"
   },
   "keywords": [
     "react-native",
@@ -21,7 +21,11 @@
     "android",
     "ios"
   ],
-  "author": "Yann Pringault <yann.pringault@gmail.com>",
+  "author": {
+    "name": "Yann Pringault",
+    "email": "yann.pringault@gmail.com"
+  },
+  "homepage": "https://github.com/Skyscanner/react-native-awesome-card-io",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10"
