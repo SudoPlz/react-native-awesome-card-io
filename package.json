@@ -1,6 +1,6 @@
 {
   "name": "react-native-awesome-card-io",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "A complete and cross-platform React Native component for card.io",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,7 @@
   "homepage": "https://github.com/Skyscanner/react-native-awesome-card-io",
   "license": "MIT",
   "dependencies": {
-    "prop-types": "^15.5.10",
-    "react-native-awesome-card-io": "SudoPlz/react-native-awesome-card-io#bin"
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
